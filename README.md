@@ -53,3 +53,12 @@ Build one small real-world project using the day's concepts.
 
 Build strong SQL and Data Engineering skills
 through daily learning, coding, practice, and projects.
+
+
+📁 SQL
+ ├── 📂 Day-01
+ ├── 📂 Day-02
+ ├── 📂 Day-03
+ ├── 📂 Day-04
+ ├── 📂 Day-05
+ └── 📂 Day-06
