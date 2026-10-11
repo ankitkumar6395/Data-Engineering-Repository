@@ -51,7 +51,7 @@ Develop the skills to design, manage, secure, and optimize databases that suppor
 
 ## 👨‍💻 Author
 
-**Ankit Kumar**
+*Ankit Kumar*
 
 🐙 GitHub: [ankitkumar6395](https://github.com/ankitkumar6395)
 
