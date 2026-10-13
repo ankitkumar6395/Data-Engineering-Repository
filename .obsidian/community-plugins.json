@@ -5,8 +5,10 @@
   "code-styler",
   "editing-toolbar",
   "obsidian-style-settings",
-  "obsidian-minimal-settings",
   "rich-text-editor",
   "wysimark-editor",
-  "obsidian-git"
+  "obsidian-git",
+  "editor-width-slider",
+  "obsidian-markmind",
+  "obsidian-minimal-settings"
 ]
