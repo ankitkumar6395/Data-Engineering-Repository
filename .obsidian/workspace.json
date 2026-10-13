@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01. SQL Data Modeling Studio.md",
+                "file": "07. Workflow Orchestration Module Interview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01. SQL Data Modeling Studio"
+              "title": "07. Workflow Orchestration Module Interview"
             }
           }
         ],
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01. SQL Data Modeling Studio.md",
+                "file": "07. Workflow Orchestration Module Interview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,6 +216,9 @@
   },
   "active": "b0bfcc02ed64e475",
   "lastOpenFiles": [
+    "05. Big Data Technologies Module Interview.md",
+    "07. Workflow Orchestration Module Interview.md",
+    "01. SQL Data Modeling Studio.md",
     "07. Workflow Orchestration Module/Beginner Level Workflow Days 01-15/README",
     "07. Workflow Orchestration Module/Beginner Level Workflow Days 01-15/07. Workflow Orchestration Module Interview.md",
     "07. Workflow Orchestration Module/Beginner Level Workflow Days 01-15/07. Workflow Orchestration Module Data Engineer.ipynb",
@@ -235,7 +238,6 @@
     "05. Big Data Technologies Module",
     "04. ETL & Data Pipelines Module/Beginner  Level ETL Days 01-20/README.md",
     "04. ETL & Data Pipelines Module/Beginner  Level ETL Days 01-20/04. ETL & Data Pipelines Module Interview.md",
-    "04. ETL & Data Pipelines Module/Beginner  Level ETL Days 01-20/04. ETL & Data Pipelines Module Data Engineer.ipynb",
     "04. ETL & Data Pipelines Module/README.md",
     "10. Data Engineering Projects Module/Beginner Level Data Engineering/README.md",
     "10. Data Engineering Projects Module/README.md",
@@ -249,8 +251,6 @@
     "02. Python Module Data Engineer/Beginner Level  Python Days 01-20/README.md",
     "02. Python Module Data Engineer/Beginner Level  Python Days 01-20/02. Python Module Interview .md",
     "02. Python Module Data Engineer/README.md",
-    "01. SQL Module Data Engineer/README.md",
-    "01. SQL Module Data Engineer/Beginner Level  SQL Days 01-20/01. SQL Module Interview.md",
-    "07. Workflow Orchestration Module Interview.md"
+    "01. SQL Module Data Engineer/README.md"
   ]
 }
