@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Data Engineer Portfolio">
+    <title>Data Engineering Repository</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #e5e7eb;
+            background: #111827;
+        }
+
+        header {
+            text-align: center;
+            padding: 70px 20px;
+            background: #1f2937;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #d1d5db;
+        }
+
+        nav {
+            text-align: center;
+            padding: 15px;
+            background: #0f172a;
+        }
+
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #1f2937;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .project, .job {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0f172a;
+            color: #9ca3af;
+        }
+
+        a {
+            color: #38bdf8;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Data Engineering Repository</h1>
+        <p>Building reliable data pipelines and transforming raw data into insights.</p>
+        <p>Data Engineer | SQL | Python | ETL | Power BI</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am an aspiring Data Engineer interested in building data
+                pipelines, managing databases, and developing efficient
+                data processing solutions.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>SQL and Database Management</li>
+                <li>Python, Pandas, and NumPy</li>
+                <li>ETL and Data Pipeline Development</li>
+                <li>Excel and Power BI</li>
+                <li>Data Cleaning and Transformation</li>
+                <li>Git and GitHub</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="job">
+                <h3>Inventory Analyst | Hardik Construction</h3>
+                <p><em>January 2026 – July 2026</em></p>
+                <ul>
+                    <li>Managed inventory records and maintained data accuracy.</li>
+                    <li>Used Excel for tracking, reporting, and data analysis.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Sales Executive | My Money Mantra</h3>
+                <p><em>June 2025 – December 2025</em></p>
+                <ul>
+                    <li>Maintained customer records and sales data.</li>
+                    <li>Prepared reports to support sales operations.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Supply Chain Analytics</h3>
+                <p>
+                    Analyzed shipment data using Python, Pandas, NumPy,
+                    and machine learning to study delivery delays.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>PhonePe Transaction Analysis</h3>
+                <p>
+                    Developed a Power BI dashboard to analyze transaction
+                    trends across Indian states.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: your-email@example.com</p>
+            <p>
+                GitHub:
+                <a href="https://github.com/ankitkumar6395"
+                   target="_blank" rel="noopener noreferrer">
+                    View GitHub Profile
+                </a>
+            </p>
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/ankitkumar6395/"
+                   target="_blank" rel="noopener noreferrer">
+                    View LinkedIn Profile
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Data Engineering Repository. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
