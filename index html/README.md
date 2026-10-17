@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Ankit Kumar's Data Engineering Portfolio featuring skills, experience, and data projects.">
+
+    <title>Data Engineering Repository | Ankit Kumar</title>
+
+    <style>
+        :root {
+            --background: #0b1120;
+            --surface: #151f32;
+            --primary: #38bdf8;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --border: #29374d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #0b1120;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-content {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 100px 0 90px;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    #163550 0,
+                    transparent 45%
+                );
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 14px;
+            border: 1px solid #28516c;
+            border-radius: 30px;
+            color: var(--primary);
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 58px);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid var(--primary);
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button.primary {
+            background: var(--primary);
+            color: #07111d;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* General Sections */
+
+        section {
+            padding: 65px 0;
+            scroll-margin-top: 70px;
+        }
+
+        .section-heading {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .accent {
+            color: var(--primary);
+        }
+
+        .about-text {
+            max-width: 850px;
+            color: #cbd5e1;
+        }
+
+        /* Skills */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: #202e43;
+            color: #bae6fd;
+            padding: 7px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        /* Experience */
+
+        .timeline {
+            border-left: 2px solid #28516c;
+            padding-left: 25px;
+            margin-left: 8px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            left: -32px;
+            top: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .date {
+            color: var(--primary);
+            font-size: 13px;
+            margin: 5px 0 10px;
+        }
+
+        .timeline-item ul {
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        /* Projects */
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .project-card .button {
+            margin-top: auto;
+            font-size: 13px;
+            padding: 9px 14px;
+        }
+
+        .project-type {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+        }
+
+        /* Contact */
+
+        .contact-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .contact-box p {
+            margin: 12px 0;
+            color: var(--muted);
+            overflow-wrap: anywhere;
+        }
+
+        .contact-box a:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
+
+        footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 25px 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 750px) {
+            .nav-content {
+                padding: 15px 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading {
+                font-size: 26px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a class="logo" href="#home">Data Engineering</a>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="container">
+            <span class="tag">DATA ENGINEER PORTFOLIO</span>
+
+            <h1>
+                Data Engineering<br>
+                <span>Repository</span>
+            </h1>
+
+            <p>
+                Hi, I'm Ankit Kumar. I work with data, build analytical
+                solutions, and develop my skills in SQL, Python,
+                ETL processes, and data pipeline development.
+            </p>
+
+            <div class="buttons">
+                <a class="button primary"
+                   href="https://github.com/ankitkumar6395/Data-Engineering-Repository"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Explore GitHub Repository
+                </a>
+
+                <a class="button" href="#projects">
+                    View Projects
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-heading">
+                    About <span class="accent">Me</span>
+                </h2>
+
+                <p class="section-description">
+                    A brief introduction to my data engineering journey.
+                </p>
+
+                <p class="about-text">
+                    I am an aspiring Data Engineer with a Bachelor of
+                    Computer Applications degree. My technical interests
+                    include data management, data cleaning, SQL queries,
+                    Python programming, ETL workflows, and data analysis.
+                    I enjoy working with datasets and developing practical
+                    projects that help turn raw data into useful information.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-heading">
+                    Technical <span class="accent">Skills</span>
+                </h2>
+
+                <p class="section-description">
+                    Technologies and tools used in my learning and projects.
+                </p>
+
+                <div class="grid">
+
+                    <article class="card">
+                        <h3>Database & Querying</h3>
+                        <ul class="skills-list">
+                            <li>SQL</li>
+                            <li>MySQL</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Programming</h3>
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>NumPy</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Data Engineering</h3>
+                        <ul class="skills-list">
+                            <li>ETL</li>
+                            <li>Data Pipelines</li>
+                            <li>Data Transformation</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Data Visualization</h3>
+                        <ul class="skills-list">
+                            <li>Power BI</li>
+                            <li>DAX</li>
+                            <li>Power Query</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Data Management</h3>
+                        <ul class="skills-list">
+                            <li>Excel</li>
+                            <li>Data Cleaning</li>
+                            <li>Reporting</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3>Development Tools</h3>
+                        <ul class="skills-list">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Jupyter Notebook</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-heading">
+                    Work <span class="accent">Experience</span>
+                </h2>
+
+                <p class="section-description">
+                    My professional experience.
+                </p>
+
+                <div class="timeline">
+
+                    <article class="timeline-item">
+                        <h3>Inventory Analyst</h3>
+                        <p>Hardik Construction | Panipat</p>
+                        <p class="date">January 2026 – July 2026</p>
+
+                        <ul>
+                            <li>
+                                Maintained inventory records and updated
+                                stock information.
+                            </li>
+                            <li>
+                                Used Excel to organize inventory data and
+                                prepare reports.
+                            </li>
+                            <li>
+                                Supported inventory tracking and
+                                data accuracy.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <h3>Sales Executive</h3>
+                        <p>My Money Mantra | Noida</p>
+                        <p class="date">June 2025 – December 2025</p>
+
+                        <ul>
+                            <li>
+                                Maintained customer records and sales data.
+                            </li>
+                            <li>
+                                Used Excel to organize information and
+                                support sales reporting.
+                            </li>
+                            <li>
+                                Supported day-to-day sales operations
+                                and customer data management.
+                            </li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-heading">
+                    Featured <span class="accent">Projects</span>
+                </h2>
+
+                <p class="section-description">
+                    Selected projects showcasing my technical skills.
+                </p>
+
+                <div class="grid">
+
+                    <article class="card project-card">
+                        <span class="project-type">Python · Analytics</span>
+
+                        <h3>Supply Chain Analytics</h3>
+
+                        <p>
+                            Analyzed shipment data using Python libraries
+                            and explored delivery delays, inventory trends,
+                            and late-delivery risk.
+                        </p>
+
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>NumPy</li>
+                            <li>Scikit-learn</li>
+                        </ul>
+
+                        <a class="button"
+                           href="https://github.com/ankitkumar6395/Data-Engineering-Repository"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Repository
+                        </a>
+                    </article>
+
+                    <article class="card project-card">
+                        <span class="project-type">Power BI · Dashboard</span>
+
+                        <h3>PhonePe Transaction Analysis</h3>
+
+                        <p>
+                            Developed a dashboard to explore transaction
+                            trends, regional performance, and digital
+                            payment patterns across Indian states.
+                        </p>
+
+                        <ul class="skills-list">
+                            <li>Power BI</li>
+                            <li>Excel</li>
+                            <li>DAX</li>
+                            <li>Power Query</li>
+                        </ul>
+
+                        <a class="button"
+                           href="https://github.com/ankitkumar6395/Data-Engineering-Repository"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Repository
+                        </a>
+                    </article>
+
+                    <article class="card project-card">
+                        <span class="project-type">SQL · Python · BI</span>
+
+                        <h3>Netflix Viewing Patterns</h3>
+
+                        <p>
+                            Explored viewing data to identify content
+                            trends and patterns using data analysis
+                            and visualization tools.
+                        </p>
+
+                        <ul class="skills-list">
+                            <li>SQL</li>
+                            <li>Python</li>
+                            <li>Excel</li>
+                            <li>Power BI</li>
+                        </ul>
+
+                        <a class="button"
+                           href="https://github.com/ankitkumar6395/Data-Engineering-Repository"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Repository
+                        </a>
+                    </article>
+
+                    <article class="card project-card">
+                        <span class="project-type">GitHub · Data Engineering</span>
+
+                        <h3>Data Engineering Repository</h3>
+
+                        <p>
+                            Explore my repository for data engineering
+                            practice, SQL queries, Python exercises,
+                            and project work.
+                        </p>
+
+                        <ul class="skills-list">
+                            <li>SQL</li>
+                            <li>Python</li>
+                            <li>ETL</li>
+                            <li>Data Pipelines</li>
+                        </ul>
+
+                        <a class="button primary"
+                           href="https://github.com/ankitkumar6395/Data-Engineering-Repository"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Open GitHub Repository
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-heading">
+                    Get In <span class="accent">Touch</span>
+                </h2>
+
+                <p class="section-description">
+                    Connect with me to discuss data engineering,
+                    projects, and professional opportunities.
+                </p>
+
+                <div class="contact-box">
+                    <p>
+                        <strong>Name:</strong> Ankit Kumar
+                    </p>
+
+                    <p>
+                        <strong>Role:</strong> Aspiring Data Engineer
+                    </p>
+
+                    <p>
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/ankitkumar6395"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            github.com/ankitkumar6395
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Repository:</strong>
+                        <a href="https://github.com/ankitkumar6395/Data-Engineering-Repository"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Data Engineering Repository
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/ankitkumar6395/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Connect on LinkedIn
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        Replace with your professional email address.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; <span id="year">2026</span> Ankit Kumar.
+                Data Engineering Portfolio.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
